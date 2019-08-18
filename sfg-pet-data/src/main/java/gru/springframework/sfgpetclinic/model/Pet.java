@@ -2,8 +2,12 @@ package gru.springframework.sfgpetclinic.model;
 
 import java.time.LocalDate;
 
-public class Pet {
+public class Pet extends BaseEntity{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private PetType pettype;
 	private Owner owner;
 	private LocalDate birthDate;

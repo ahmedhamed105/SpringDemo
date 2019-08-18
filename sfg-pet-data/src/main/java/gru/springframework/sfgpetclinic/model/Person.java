@@ -1,7 +1,11 @@
 package gru.springframework.sfgpetclinic.model;
 
-public class Person {
+public class Person extends BaseEntity{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String firstname;
 	private String lastname;
 	
