@@ -4,38 +4,35 @@
   <parent>
     <groupId>gru.springframework</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>0.0.2</version>
   </parent>
-  
-  
-  <artifactId>sfg-pet-web</artifactId>
+ 
+  <artifactId>sfg-pet-data</artifactId>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <spring-boot.repackage.skip>true</spring-boot.repackage.skip>
+    
   </properties>
-  
-  
   <dependencies>
+  
   <dependency>
-    <groupId>gru.springframework</groupId>
-    <artifactId>sfg-pet-data</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
-  </dependency>
-  
-  
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-devtools</artifactId>
-			<scope>runtime</scope>
-			<optional>true</optional>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		
 		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<optional>true</optional>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+				<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
@@ -46,27 +43,33 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-  		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-actuator</artifactId>
-		</dependency>
-		
   
-  	<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
   
   </dependencies>
   
   
   
+  	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<executions>
+				<execution>
+				<goals>
+				<goal>repackage</goal>
+				</goals>
+				<configuration>
+				<skip>true</skip>
+				</configuration>
+				</execution>
+				</executions>
+				
+			</plugin>
+		</plugins>
+	</build>
   
   
- 
+  
   
 </project>
