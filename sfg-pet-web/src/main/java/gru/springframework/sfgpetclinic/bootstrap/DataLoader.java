@@ -32,14 +32,14 @@ public class DataLoader implements CommandLineRunner{
 		// TODO Auto-generated method stub
 		
 		Owner owner1= new Owner();
-		owner1.setId(1L);
+		//owner1.setId(1L);
 		owner1.setFirstname("ahmed");
 		owner1.setLastname("hamed");
 		ownerservice.save(owner1);
 		
 		
 		Owner owner2= new Owner();
-		owner2.setId(2L);
+		//owner2.setId(2L);
 		owner2.setFirstname("mohamed");
 		owner2.setLastname("said");
 		ownerservice.save(owner2);
@@ -49,14 +49,14 @@ public class DataLoader implements CommandLineRunner{
 		
 		
 		Vet vet1=new Vet();
-		vet1.setId(1L);
+		//vet1.setId(1L);
 		vet1.setFirstname("vert");
 		vet1.setLastname("AXE");
 		vetservice.save(vet1);
 		
 		
 		Vet vet2=new Vet();
-		vet2.setId(2L);
+		//vet2.setId(2L);
 		vet2.setFirstname("DESS");
 		vet2.setLastname("CVV");
 		vetservice.save(vet2);
